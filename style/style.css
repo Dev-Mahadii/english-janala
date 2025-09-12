@@ -1,0 +1,14 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+.font-bangla{
+    font-family: "Hind Siliguri", sans-serif;
+}
+
+
+@media screen and (max-width: 1024px){
+    .navbar-end{
+        display: none;
+    }
+}
