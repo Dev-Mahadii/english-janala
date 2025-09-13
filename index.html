@@ -115,9 +115,16 @@
       </div>
     </header>
 
-    <section class="flex flex-col-reverse md:flex-row gap-5 justify-between items-center py-5 w-11/12 mx-auto">
-      <div class="content lg:w-1/2 sm:w-full space-y-5 text-center md:text-left">
-        <h2 class="text-4xl font-bold text-[#181818]"><span class="text-[#00BCFF] text-4xl font-bold">English</span> is Easy !!</h2>
+    <section
+      class="flex flex-col-reverse md:flex-row gap-5 justify-between items-center py-5 w-11/12 mx-auto"
+    >
+      <div
+        class="content lg:w-1/2 sm:w-full space-y-5 text-center md:text-left"
+      >
+        <h2 class="text-4xl font-bold text-[#181818]">
+          <span class="text-[#00BCFF] text-4xl font-bold">English</span> is Easy
+          !!
+        </h2>
         <p class="font-bangla text-[#181818] font-medium text-xl leading-8">
           আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
           আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
@@ -125,25 +132,68 @@
         </p>
       </div>
       <div class="image lg:w-1/2 sm:w-full">
-        <img src="./resources/images/hero-student.png" class="w-full" alt="img-hero">
+        <img
+          src="./resources/images/hero-student.png"
+          class="w-full"
+          alt="img-hero"
+        />
       </div>
     </section>
 
     <section>
-       <h2 class="text-4xl font-bold text-[#181818] text-center"><span class="text-[#00BCFF] text-4xl font-bold">Let's</span> Learn Vocabulary</h2>
-       <div id="level-container" class="flex flex-wrap justify-center gap-5 py-10">
-
-       </div>
+      <h2 class="text-4xl font-bold text-[#181818] text-center">
+        <span class="text-[#00BCFF] text-4xl font-bold">Let's</span> Learn
+        Vocabulary
+      </h2>
+      <div
+        id="level-container"
+        class="flex flex-wrap justify-center gap-5 py-10"
+      ></div>
     </section>
 
-    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5">
-    
-      <div class="text-center col-span-full bg-sky-100 rounded-xl py-10 space-y-6 font-bangla">
-        <p class="text-xl font-medium text-gray-400">আপনি এখনো কোনো lesson select করেননি</p>
+    <section class="flex justify-center mx-auto">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+            <input id="input-search" type="text" placeholder="Search a word" required />
+          </label>
+        </div>
+        <button id="btn-search" class="btn btn-primary join-item">Search</button>
+      </div>
+    </section>
+
+    <!--by default hidden-->
+    <section id="spinner" class="flex justify-center items-center py-10 hidden">
+      <span class="loading loading-bars loading-xl"></span>
+    </section>
+
+    <section
+      id="word-container"
+      class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5"
+    >
+      <div
+        class="text-center col-span-full bg-sky-100 rounded-xl py-10 space-y-6 font-bangla"
+      >
+        <p class="text-xl font-medium text-gray-400">
+          আপনি এখনো কোনো lesson select করেননি
+        </p>
         <h2 class="font-medium text-3xl">একটি lesson select করুন</h2>
       </div>
     </section>
 
+    <!-- Open the modal using ID.showModal() method -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="details-container" class="space-y-5"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="./js/index.js"></script>
   </body>
